@@ -23,9 +23,10 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  if phone.scan(/[0-9]{10}/)  == nil 
-    return false 
-  else 
+  digitsArray =  phone.scan(/[0-9]/)
+  if digitsArray.length == 10 
     return true 
+  else 
+    return false
   end
 end
